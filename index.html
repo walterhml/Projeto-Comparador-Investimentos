@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Simulador Investimentos</title>
+</head>
+
+<body>
+    <div class="investment-container">
+        <div class="investment-card">
+            <h2>Investimento</h2>
+
+            <label for="investment-amount">Valor Inicial:</label>
+            <p><input type="number" id="investment-amount" value="100">,00</p>
+
+            <label for="investment-term">Vencimento:</label>
+            <p>
+                <input type="number" id="investment-term" value="24">
+                <select id="period-type">
+                    <option value="days">Dias</option>
+                    <option value="months" selected>Meses</option>
+                    <option value="years">Anos</option>
+                </select>
+            </p>
+
+            <label for="di-rate">Taxa DI:</label>
+            <p><input type="number" id="di-rate" value="12.00" step="0.01"> % ao ano</p>
+
+            <label for="selic-rate">Taxa SELIC:</label>
+            <p><input type="number" id="selic-rate" value="12.00" step="0.01"> % ao ano</p>
+
+            <label for="cdb-rate">CDB/RDB/LC:</label>
+            <p><input type="number" id="cdb-rate" value="100"> % DI</p>
+
+            <label for="lci-rate">LCI/LCA:</label>
+            <p><input type="number" id="lci-rate" value="100"> % DI</p>
+        </div>
+    </div>
+
+    <div class="result-container">
+        <div class="result-card">
+            <h2>Poupança</h2>
+            <p>Valor Investido: R$ 100,00</p>
+            <p>Rendimento Bruto: R$ 15,91</p>
+            <p>Valor Total Líquido: R$ 115,91</p>
+            <div class="progress-bar">
+                <div class="progress-bar-inner" style="width: 15.91%;">15.91%</div>
+            </div>
+        </div>
+
+        <div class="result-card">
+            <h2>CDB / RDB</h2>
+            <p>Valor Investido: R$ 100,00</p>
+            <p>Rendimento Bruto: R$ 27,27</p>
+            <p>Imposto de Renda: R$ 4,09 (15%)</p>
+            <p>Valor Total Líquido: R$ 123,18</p>
+            <div class="progress-bar">
+                <div class="progress-bar-inner" style="width: 23.18%;">23.18%</div>
+            </div>
+        </div>
+
+        <div class="result-card">
+            <h2>LCI / LCA</h2>
+            <p>Valor Investido: R$ 100,00</p>
+            <p>Rendimento Bruto: R$ 24,66</p>
+            <p>Valor Total Líquido: R$ 124,66</p>
+            <div class="progress-bar">
+                <div class="progress-bar-inner" style="width: 24.66%;">24.66%</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
